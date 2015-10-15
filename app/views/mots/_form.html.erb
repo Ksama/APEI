@@ -1,0 +1,25 @@
+<%= form_for(@mot) do |f| %>
+  <% if @mot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mot.errors.count, "error") %> prohibited this mot from being saved:</h2>
+
+      <ul>
+      <% @mot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :abreviation %><br>
+    <%= f.text_field :abreviation %>
+  </div>
+  <div class="field">
+    <%= f.label :signification %><br>
+    <%= f.text_field :signification %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

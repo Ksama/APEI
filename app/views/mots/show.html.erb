@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Abreviation:</strong>
+  <%= @mot.abreviation %>
+</p>
+
+<p>
+  <strong>Signification:</strong>
+  <%= @mot.signification %>
+</p>
+
+<%= link_to 'Editer', edit_mot_path(@mot) %> |
+<%= link_to 'Retour', mots_path %>
